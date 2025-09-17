@@ -36,13 +36,13 @@ class WeatherNewsDashboard:
         tk.Label(self.root, text="Enter City:").pack(pady=5)
         self.city_entry = tk.Entry(self.root, width=50)
         self.city_entry.pack()
-        self.city_entry.insert(0, "London")  # Default to a reliable city for testing
+        self.city_entry.insert(0, "London") # Default city
 
         # News category entry
         tk.Label(self.root, text="Enter News Category (e.g., general, sports, technology):").pack(pady=5)
         self.news_category_entry = tk.Entry(self.root, width=50)
         self.news_category_entry.pack()
-        self.news_category_entry.insert(0, "general")
+        self.news_category_entry.insert(0, "general") # Default category
 
         # Email sender entry
         tk.Label(self.root, text="Enter Sender Email:").pack(pady=5)
@@ -92,6 +92,7 @@ class WeatherNewsDashboard:
         # Start daily email thread
         self.start_daily_email_thread()
 
+        # Start the GUI event loop
         self.root.mainloop()
 
     def fetch_weather(self, city):
@@ -121,7 +122,7 @@ class WeatherNewsDashboard:
             response = requests.get(url)
             response.raise_for_status()
             data = json.loads(response.text)
-            articles = data['articles'][:5]  # Top 5 articles
+            articles = data['articles'][:5]  # Get top 5 articles
             news_str = ""
             for article in articles:
                 title = article['title']
@@ -131,7 +132,7 @@ class WeatherNewsDashboard:
             return news_str.strip() if news_str else "No news articles found."
         except requests.exceptions.HTTPError as e:
             if e.response.status_code == 404:
-                raise Exception(f"Category '{category}' not found or invalid. Please check the spelling or try another category (e.g., general, technology).")
+                raise Exception(f"Category '{category}' not found or invalid. Please check the spelling or try another category (e.g., general, sports, technology).")
             raise Exception(f"Error fetching news: {str(e)}")
         except (KeyError, json.JSONDecodeError):
             raise Exception("Error parsing news data.")
@@ -192,18 +193,18 @@ class WeatherNewsDashboard:
 
     def daily_email_thread(self):
         while True:
-            now = datetime.datetime.now(datetime.timezone.utc)  # Fixed: Make timezone-aware
+            now = datetime.datetime.now(datetime.timezone.utc) 
             # Calculate seconds until next 8:00 AM IST
             tomorrow = now + datetime.timedelta(days=1)
             next_send = datetime.datetime(tomorrow.year, tomorrow.month, tomorrow.day, 8, 0, 0, tzinfo=datetime.timezone(datetime.timedelta(hours=5, minutes=30)))
             seconds_until = (next_send - now).total_seconds()
             time.sleep(seconds_until)
-            # Note: This will use the last-entered values for city/category/email. In a real app, save them persistently.
             self.send_email()
 
     def start_daily_email_thread(self):
         thread = threading.Thread(target=self.daily_email_thread, daemon=True)
         thread.start()
 
+# Start the application
 if __name__ == "__main__":
     app = WeatherNewsDashboard()
