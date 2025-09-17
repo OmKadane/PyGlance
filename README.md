@@ -1,10 +1,10 @@
 # 👀 PyGlance - Your Daily Weather & News Update
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white)  
-![Tkinter](https://img.shields.io/badge/GUI-Tkinter-red.svg)  
-![Requests](https://img.shields.io/badge/Requests-HTTP-blue?logo=python&logoColor=white)  
-![OpenWeatherAPI](https://img.shields.io/badge/API-OpenWeather-orange?logo=cloud&logoColor=white)  
-![NewsAPI](https://img.shields.io/badge/API-NewsAPI-yellow?logo=news&logoColor=black)  
+![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python&logoColor=white) 
+![Tkinter](https://img.shields.io/badge/GUI-Tkinter-red.svg) 
+![Requests](https://img.shields.io/badge/Requests-HTTP-blue?logo=python&logoColor=white) 
+![OpenWeatherAPI](https://img.shields.io/badge/API-OpenWeather-orange?logo=cloud&logoColor=white) 
+![NewsAPI](https://img.shields.io/badge/API-NewsAPI-yellow?logo=news&logoColor=black) 
 ![SMTP](https://img.shields.io/badge/Email-SMTP-green?logo=gmail&logoColor=white)  
 
 PyGlance is a desktop application that provides real-time weather and news updates, along with the ability to send automated daily email updates to any user.
@@ -65,10 +65,10 @@ Once the installation is complete, run the following command in your terminal:
 ```bash
 python main.py
 ```
-* **Enter your city and news category
-* **Click Fetch Data to see updates
-* **Configure email settings and click Send Email Update Now
-* **Daily automated emails will be sent at 8:00 AM IST
+* Enter your city and news category
+* Click Fetch Data to see updates
+* Configure email settings and click Send Email Update Now
+* Daily automated emails will be sent at 8:00 AM IST
 
 ---
 
