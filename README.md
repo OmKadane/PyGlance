@@ -13,25 +13,25 @@ PyGlance is a desktop application that provides real-time weather and news updat
 
 ## ✨ Features
 
-* 🌦 Weather Updates – Get current weather with temperature, humidity, and conditions
-* 📰 News Headlines – Fetch top news by category (general, sports, technology, etc.)
-* 📧 Email Notifications – Send daily reports (Weather + News) directly to your inbox
-* ⏰ Auto-Scheduler – Automatic email delivery every morning at 8:00 AM IST
-* 🖥️ User-Friendly GUI – Built with Tkinter and ScrolledText widgets
-* 🔑 Environment Variables – Secure API keys and credentials via .env file
+* 🌦 **Weather Updates** – Get current weather with temperature, humidity, and conditions
+* 📰 **News Headlines** – Fetch top news by category (general, sports, technology, etc.)
+* 📧 **Email Notifications** – Send daily reports (Weather + News) directly to your inbox
+* ⏰ **Auto-Scheduler** – Automatic email delivery every morning at 8:00 AM IST
+* 🖥️ **User-Friendly GUI** – Built with Tkinter and ScrolledText widgets
+* 🔑 **Environment Variables** – Secure API keys and credentials via .env file
 
 ---
 
 ## 🛠️ Technologies Used
 
-- ***Python*** 3.10+ – Core programming language
-- ***Tkinter*** – For GUI development
-- ***Requests*** – For API communication
-- ***OpenWeatherAPI*** – For real-time weather updates
-- ***NewsAPI*** – For top headlines and categories
-- ***smtplib*** & ***email.mime*** – For sending structured emails
-- ***threading*** & ***datetime*** – For scheduling daily tasks
-- ***dotenv*** – For environment variable management
+- ***Python*** 3.10+ – Core programming language.
+- ***Tkinter*** – For GUI development.
+- ***Requests*** – For API communication.
+- ***OpenWeatherAPI*** – For real-time weather updates.
+- ***NewsAPI*** – For top headlines and categories.
+- ***smtplib*** & ***email.mime*** – For sending structured emails.
+- ***threading*** & ***datetime*** – For scheduling daily tasks.
+- ***dotenv*** – For environment variable management.
 
 ---
 
@@ -74,10 +74,10 @@ python main.py
 
 ## 🔮 Future Scope
 
-* ✅ SMS Alerts – Integrate Twilio/Nexmo to send Weather + News as SMS
-* ✅ Push Notifications – Desktop/mobile notifications for breaking news
-* ✅ Multi-City Support – Track weather for multiple locations
-* ✅ Advanced Scheduler – Customizable time slots for updates
-* ✅ Cloud Sync – Save preferences and history in a database
-* ✅ Dark Mode UI – Improved visual experience for night use
-* ✅ Web Dashboard – Access PyGlance via browser
+* ✅ **SMS Alerts** – Integrate Twilio/Nexmo to send Weather + News as SMS
+* ✅ **Push Notifications** – Desktop/mobile notifications for breaking news
+* ✅ **Multi-City Support** – Track weather for multiple locations
+* ✅ **Advanced Scheduler** – Customizable time slots for updates
+* ✅ **Cloud Sync** – Save preferences and history in a database
+* ✅ **Dark Mode UI** – Improved visual experience for night use
+* ✅ **Web Dashboard** – Access PyGlance via browser
